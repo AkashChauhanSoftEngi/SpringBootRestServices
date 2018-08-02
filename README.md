@@ -3,9 +3,11 @@
 * Spring Boot{2.0.3.RELEASE} + + Rest Services(CRUD) {Create, Remove, Update, delete} + H2-Database Integration + MVC + HTML View with pure Java Configuration (no XML), using Maven build tool.
 
 > **###1. Features**
-* 
-* 
-* 
+* userService.saveUser(user) {userRepository.save(outUser)}
+* userService.getAllUsers() {userRepository.findAll()}
+* userService.findUserById(Long id) {userRepository.findUserById(id), UserRepo}
+* userService.updateUser(DtoUser) {userRepository.findUserById(id) & userRepository.save(dbUser)}
+* userService.deleteUser() userRepository.deleteById(userId)}
 
 > **###2. Advantages**
 * It is very easy to develop Spring Based applications with Java or Groovy.
