@@ -6,6 +6,21 @@
 * userService.saveUser(user) {userRepository.save(outUser)}
 * userService.getAllUsers() {userRepository.findAll()}
 * userService.findUserById(Long id) {userRepository.findUserById(id), UserRepo}
+```java
+      @Repository
+      @Transactional
+      public class UserRepoImpl implements UserRepo{
+
+    	@Autowired
+	    @PersistenceContext
+	    EntityManager em;
+	
+	    @Override
+	    public User findUserById(Long id) {
+		  return em.find(User.class,id);
+	    }
+      }
+```
 * userService.updateUser(DtoUser) {userRepository.findUserById(id) & userRepository.save(dbUser)}
 * userService.deleteUser() userRepository.deleteById(userId)}
 
