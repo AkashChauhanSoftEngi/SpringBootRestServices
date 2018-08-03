@@ -40,16 +40,20 @@
 * No need to create database explicitely, as run time H2-Database will be created automatically
 * Quiet easy to test application with run time database {H2-Database}
 
-> **###3. Technologies**
+> **###3. Additional Details**
+* The @ComponentScan annotation is used to automatically create beans for every class annotated with @Component, @Service, @Controller,   @RestController, @Repository, ... and adds them to the Spring container (allowing them to be @Autowired). It will not scan anything     else except IOC component
+* The @EntityScan on the other hand does not create beans. It only identifies which classes should be used by a specific persistence     context.
+
+> **###4. Technologies**
 * Spring Boot 2.0.3.RELEASE (Latest)
 * Rest Services(CRUD) {Create, Remove, Update, delete}
 * H2-Database
 * Maven 3.1
 * JSTL 1.2
 
-> **###4. To Run this project locally**
+> **###5. To Run this project locally**
 * $ git clone https://github.com/AkashChauhanSoftEngi/SpringBootRestServices
 * $ mvn tomcat7:run
 
-> **###5.  Access** 
+> **###6.  Access** 
 * http://localhost:8080/user, http://localhost:8080/users/{id} for GET, http://localhost:8080/users/{id} for PUT, http://localhost:8080/users/{id} for DELETE 
