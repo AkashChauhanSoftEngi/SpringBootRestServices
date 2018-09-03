@@ -50,6 +50,8 @@
 	@EnableJpaRepositories(basePackages = "com.example.repository")
 	@EntityScan(basePackages = "com.example.entity")
 ```
+* It is always safe not to use model classes directly but dto{Data transfer objects} classes for all the calculations and functionings
+
 
 > **###4. Technologies**
 * Spring Boot 2.0.3.RELEASE (Latest)
