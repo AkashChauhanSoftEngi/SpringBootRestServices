@@ -43,6 +43,13 @@
 > **###3. Additional Details**
 * The @ComponentScan annotation is used to automatically create beans for every class annotated with @Component, @Service, @Controller,   @RestController, @Repository, ... and adds them to the Spring container (allowing them to be @Autowired). It will not scan anything     else except IOC component
 * The @EntityScan on the other hand does not create beans. It only identifies which classes should be used by a specific persistence     context.
+* If we are using our own packages to store various classes, then the class that contains main method need this{example}
+```text
+	@SpringBootApplication
+	@ComponentScan(basePackages = "com.example")
+	@EnableJpaRepositories(basePackages = "com.example.repository")
+	@EntityScan(basePackages = "com.example.entity")
+```
 
 > **###4. Technologies**
 * Spring Boot 2.0.3.RELEASE (Latest)
