@@ -62,7 +62,7 @@
 
 > **###5. To Run this project locally**
 * $ git clone https://github.com/AkashChauhanSoftEngi/SpringBootRestServices
-* $ mvn tomcat7:run
+* $ tomcat {Embedded}
 
 > **###6.  Access** 
 * http://localhost:8080/user, http://localhost:8080/users/{id} for GET, http://localhost:8080/users/{id} for PUT, http://localhost:8080/users/{id} for DELETE 
